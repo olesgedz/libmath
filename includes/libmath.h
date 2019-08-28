@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libmath.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jblack-b <jblack-b@student.42.fr>          +#+  +:+       +#+        */
+/*   By: olesgedz <olesgedz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 12:54:27 by jblack-b          #+#    #+#             */
-/*   Updated: 2019/06/03 15:48:51 by jblack-b         ###   ########.fr       */
+/*   Updated: 2019/08/29 01:15:54 by olesgedz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include "libft.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <math.h>
 #define min(a,b)             (((a) < (b)) ? (a) : (b)) // min: Choose smaller of two scalars.
 #define max(a,b)             (((a) > (b)) ? (a) : (b)) // max: Choose greater of two scalars.
 #define clamp(a, mi,ma)      min(max(a,mi),ma)         // clamp: Clamp value into set range.
@@ -35,6 +36,10 @@
 
 
 typedef	struct 	s_vec3 t_vec3;
+typedef struct s_vertex t_vertex;
+typedef struct s_sector t_sector;
+typedef struct s_coord t_coord;
+typedef	struct 	s_vec4 t_vec4;
 
 typedef	struct s_point3
 {
@@ -65,6 +70,93 @@ typedef struct s_p2d
 	float x;
 	float y;
 } t_p2d;
+
+
+struct 	s_vec4
+{
+	float x;
+	float y;
+	float z;
+	float w;
+};
+
+
+typedef struct s_quaternion
+{
+	float s; 
+	t_vec3 v;
+} t_quaternion;
+
+
+// //point
+// t_point3 ft_point3_sum(t_point3 a, t_point3 b);
+// t_point3 ft_point3_substract(t_point3 a, t_point3 b);
+// t_point3 ft_point3_substract_vec3(t_point3 a, t_vec3 b);
+// double ft_point3_substract_sum_2(t_point3 a, t_vec3 b);
+// double ft_point3_dist(t_point3 a, t_vec3 b);
+// t_point3 ft_point3_scalar_multiply(t_point3 a, double b);
+
+// 	t_vec3 ft_vec3_create(float x, float y, float z);
+// 	t_vec3	ft_vec3_sum(t_vec3 a, t_vec3 b);
+// 	t_vec3	ft_vec3_substract(t_vec3 a, t_vec3 b);
+// 	float ft_vec3_dot_multiply(t_vec3 a, t_vec3 b);
+// 	t_vec3 ft_vec3_scalar_multiply(t_vec3 a, float b);
+// 	t_vec3 ft_vec3_cross_multiply(t_vec3 a, t_vec3 b);
+// 	float ft_vec3_norm(t_vec3 vect);
+// 	t_vec3 ft_vec3_normalize(t_vec3 vect);
+// 	float ft_vec3_projection(t_vec3 a, t_vec3 b);
+// 	void ft_vec3_print(t_vec3 a);
+// 	t_vec3 ft_vec3_neg(t_vec3 v);
+// 	t_vec3	ft_vec3_multiply_matrix(t_vec3 v, t_mat4 m);
+// 	double	ft_vec3_angle(t_vec3 a, t_vec3 b);
+// 	double			ft_vec3_length(t_vec3 v1);
+
+// t_quaternion t_quaternion_sum(t_quaternion a, t_quaternion b);
+// t_quaternion t_quaternion_substract(t_quaternion a, t_quaternion b);
+// float ft_quaternion_norm(t_quaternion q);
+// float ft_degree_to_rad(float degree);
+// t_quaternion ft_quaternion_normalize(t_quaternion q);
+// t_quaternion ft_quaternion_covert_to_unit_norm(t_quaternion q);
+// t_quaternion ft_quaternion_conjugate(t_quaternion q);
+// t_quaternion ft_quaternion_inverse(t_quaternion q);
+// t_quaternion ft_quaternion_multiply(t_quaternion a, t_quaternion b);
+// t_quaternion ft_quaternion_multiply2(t_quaternion a, t_quaternion b);
+// t_quaternion ft_quaternion_local_rotation(t_vec3 axis, float angle);
+
+// //mat
+// t_mat4	ft_mat4_identity_matrix(void);
+// t_vec3 ft_mat3_multiply_vec3(t_mat3 matrix, t_vec3 vector);
+// t_mat4	ft_mat4_multiply_mat4(t_mat4 a, t_mat4 b);
+// t_mat4	ft_mat4_scalar_multiply(t_mat4 m, double n);
+// t_mat4	ft_mat4_sum_mat4(t_mat4 a, t_mat4 b);
+// t_mat4	ft_mat4_translation_matrix(t_vec3 v);
+// t_mat4	ft_mat4_scale_matrix(double a, double b, double c);
+// t_point3 ft_mat3_multiply_point3(t_mat3 matrix, t_point3 point);
+// t_vec3 ft_mat3_multiply_vec3(t_mat3 matrix, t_vec3 vector);
+// t_mat4	ft_mat4_rotation_matrix(t_vec3 axis, double alpha);
+// void ft_mat4_print(t_mat4 mat);
+// //rot
+// t_vec3	ft_vec3_rotate_quaterion(float angle, t_vec3 vector, t_vec3 axis);
+// t_vec3	ft_vec3_rotate_quaterion2(float angle, t_vec3 vector, t_vec3 axis);
+// t_vec3 ft_vec3_project_test1(t_vec3 p);
+// t_vec3 ft_vec3_rotate_test1(t_vec3 p, t_vec3 angle);
+// t_vec3 ft_vec3_project_test2(t_vec3 p);
+// t_vec3 ft_vec3_rotate_test2(t_vec3 p, t_vec3 angle);
+// t_mat4 ft_mat4_transpose(t_mat4 mat);
+// t_mat4 ft_look_at(t_vec3 eye, t_vec3 up);
+// //normals
+// extern inline t_normal3 ft_normal3_neg(t_normal3 v);
+// extern inline t_normal3 ft_normal3_scalar_multiply(t_normal3 a, float b);
+// extern inline t_normal3	ft_normal3_sum(t_normal3 a, t_normal3 b);
+//  float ft_normal3_dot_multiply_vec3(t_normal3 a, t_vec3 b);
+// inline t_normal3 ft_normal3_scalar_multiply(t_normal3 a, float b);
+
+// //intersect
+// double		sphere_intersection(void *figure, t_ray *ray, float *t0);
+// double		cone_intersection(void *object, t_ray *ray, float *t0);
+// double		cylinder_intersection(void *object, t_ray *ray, float *t0);
+// double		plane_intersection(void *object, t_ray *ray, float *t0);
+
 
 t_vec3 ft_vec3_create(float x, float y, float z);
 t_vec3	ft_vec3_sum(t_vec3 a, t_vec3 b);
