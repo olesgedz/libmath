@@ -1,6 +1,6 @@
 NAME=libmath.a
 
-CC=clang
+CC = clang
 
 CFLAGS= -03 -Wall -Wextra -Werror
 
