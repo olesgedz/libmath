@@ -23,7 +23,8 @@ SOURCES_LIST= 	ft_vec3_create.c\
 				ft_vec3_projection.c\
 				ft_vec3_scalar_multiply.c\
 				ft_vec3_substract.c\
-				ft_vec3_sum.c
+				ft_vec3_sum.c\
+				matrix.c
 
 SOURCES = $(addprefix $(SOURCES_DIRECTORY), $(SOURCES_LIST))
 
