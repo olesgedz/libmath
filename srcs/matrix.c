@@ -117,24 +117,32 @@ t_mat4 ft_mat4_identity_matrix(void)
 // 	return (res);
 // }
 
-// t_mat4 ft_mat4_transpose(t_mat4 mat)
-// {
-// 	t_mat4  new;
+t_mat4 ft_mat4_transpose(t_mat4 mat)
+{
+	t_mat4  new;
 
-// 	int j = 0;
-// 	int k = 0;
-// 	while (j < 4)
-// 	{
-// 		k = 0;
-// 		while (k < 4)
-// 		{
-// 			new.matrix[k][j] = mat.matrix[j][k];
-// 			k++;
-// 		}
-// 		j++;
-// 	}
-// 	return (new);
-// }
+	int j = 0;
+	int k = 0;
+	// while (j < 4)
+	// {
+	// 	k = 0;
+	// 	while (k < 4)
+	// 	{
+	// 		new.matrix[k][j] = mat.matrix[j][k];
+	// 		k++;
+	// 	}
+	// 	j++;
+	// 
+	while (j < 4)
+	{
+		while (k < 4)
+		{
+			new.matrix[j + k * 4]= mat.matrix[k + j * 4];
+			k++;
+		}
+	}
+	return (new);
+}
 
 // t_mat4	ft_mat4_rotation_matrix(t_vec3 axis, double alpha)
 // {

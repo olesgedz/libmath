@@ -10,3 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libmath.h"
+
+t_vec3 ft_vec3_neg(t_vec3 vect)
+{
+	return ft_vec3_scalar_multiply(vect, -1);
+}

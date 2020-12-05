@@ -138,8 +138,8 @@ void ft_mat4_print(t_mat4 mat);
 // t_vec3 ft_vec3_rotate_test1(t_vec3 p, t_vec3 angle);
 // t_vec3 ft_vec3_project_test2(t_vec3 p);
 // t_vec3 ft_vec3_rotate_test2(t_vec3 p, t_vec3 angle);
-// t_mat4 ft_mat4_transpose(t_mat4 mat);
-// t_mat4 ft_look_at(t_vec3 eye, t_vec3 up);
+t_mat4 ft_mat4_transpose(t_mat4 mat);
+t_mat4 ft_look_at(t_vec3 eye, t_vec3 up);
 
 t_vec3 ft_vec3_create(float x, float y, float z);
 t_vec3 ft_vec3_sum(t_vec3 a, t_vec3 b);
@@ -150,5 +150,6 @@ t_vec3 ft_vec3_cross_multiply(t_vec3 a, t_vec3 b);
 float ft_vec3_norm(t_vec3 vect);
 t_vec3 ft_vec3_normalize(t_vec3 vect);
 float ft_vec3_projection(t_vec3 a, t_vec3 b);
+t_vec3 ft_vec3_neg(t_vec3 vect);
 
 #endif
