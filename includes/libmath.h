@@ -61,7 +61,7 @@ typedef struct s_mat3
 
 typedef struct s_mat4
 {
-    float matrix[16];
+    float matrix[4][4];
 } t_mat4;
 
 typedef struct s_p2d
@@ -121,6 +121,7 @@ typedef struct s_quaternion
 
 // //mat
 t_mat4 ft_mat4_identity_matrix(void);
+t_mat4 ft_mat4_zero(void);
 t_vec3 ft_mat3_multiply_vec3(t_mat3 matrix, t_vec3 vector);
 t_mat4 ft_mat4_multiply_mat4(t_mat4 a, t_mat4 b);
 t_mat4 ft_mat4_scalar_multiply(t_mat4 m, double n);
@@ -139,7 +140,7 @@ void ft_mat4_print(t_mat4 mat);
 // t_vec3 ft_vec3_project_test2(t_vec3 p);
 // t_vec3 ft_vec3_rotate_test2(t_vec3 p, t_vec3 angle);
 t_mat4 ft_mat4_transpose(t_mat4 mat);
-t_mat4 ft_look_at(t_vec3 eye, t_vec3 up);
+t_mat4 ft_look_at(t_vec3 eye, t_vec3 target, t_vec3 up);
 
 t_vec3 ft_vec3_create(float x, float y, float z);
 t_vec3 ft_vec3_sum(t_vec3 a, t_vec3 b);

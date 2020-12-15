@@ -19,12 +19,14 @@ SOURCES_LIST= 	ft_vec3_create.c\
 				ft_vec3_cross_multiply.c\
 				ft_vec3_dot_multiply.c\
 				ft_vec3_norm.c\
+				ft_vec3_neg.c\
 				ft_vec3_normalize.c\
 				ft_vec3_projection.c\
 				ft_vec3_scalar_multiply.c\
 				ft_vec3_substract.c\
 				ft_vec3_sum.c\
-				matrix.c
+				matrix.c\
+				ft_look_at.c
 
 SOURCES = $(addprefix $(SOURCES_DIRECTORY), $(SOURCES_LIST))
 

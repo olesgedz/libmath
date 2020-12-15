@@ -19,14 +19,32 @@ t_mat4 ft_mat4_identity_matrix(void)
 	int j;
 
 	i = -1;
-	while (++i < 16)
+	while (++i < 4)
 	{
-		res.matrix[i] = 0;
+		j = -1;
+		while(++j < 4)
+			res.matrix[i][j] = 0;
 	}
-	res.matrix[0] = 1;
-	res.matrix[5] = 1;
-	res.matrix[10] = 1;
-	res.matrix[15] = 1;
+	res.matrix[0][0] = 1;
+	res.matrix[1][1]= 1;
+	res.matrix[2][2] = 1;
+	res.matrix[3][3] = 1;
+	return (res);
+}
+
+t_mat4 ft_mat4_zero()
+{
+	t_mat4 res;
+	int i;
+	int j;
+
+	i = -1;
+	while (++i < 4)
+	{
+		j = -1;
+		while(++j < 4)
+			res.matrix[i][j] = 0;
+	}
 	return (res);
 }
 
@@ -123,23 +141,15 @@ t_mat4 ft_mat4_transpose(t_mat4 mat)
 
 	int j = 0;
 	int k = 0;
-	// while (j < 4)
-	// {
-	// 	k = 0;
-	// 	while (k < 4)
-	// 	{
-	// 		new.matrix[k][j] = mat.matrix[j][k];
-	// 		k++;
-	// 	}
-	// 	j++;
-	// 
 	while (j < 4)
 	{
+		k = 0;
 		while (k < 4)
 		{
-			new.matrix[j + k * 4]= mat.matrix[k + j * 4];
+			new.matrix[k][j] = mat.matrix[j][k];
 			k++;
 		}
+		j++;
 	}
 	return (new);
 }
@@ -178,7 +188,7 @@ void ft_mat4_print(t_mat4 mat)
 		printf("|");
 		while (k < 4)
 		{
-			printf("%f ", mat.matrix[k + j * 4]);
+			printf("%f ", mat.matrix[k][j]);
 			k++;
 		}
 		printf("|\n");
