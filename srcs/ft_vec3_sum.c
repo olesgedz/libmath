@@ -6,17 +6,11 @@
 /*   By: jblack-b <jblack-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 13:44:15 by jblack-b          #+#    #+#             */
-/*   Updated: 2019/06/03 13:44:44 by jblack-b         ###   ########.fr       */
+/*   Updated: 2021/01/06 18:41:33 by jblack-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libmath.h"
-
-/*
-*	Fucntion: sum of two vectors
-*	Parameters: two vectors
-*	Return: sum of two vectors, no parammeters change
-*/
 
 t_vec3	ft_vec3_sum(t_vec3 a, t_vec3 b)
 {

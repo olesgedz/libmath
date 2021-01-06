@@ -26,6 +26,7 @@ SOURCES_LIST= 	ft_vec3_create.c\
 				ft_vec3_substract.c\
 				ft_vec3_sum.c\
 				matrix.c\
+				matrix2.c\
 				ft_look_at.c\
 				rad.c\
 
