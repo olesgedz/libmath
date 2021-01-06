@@ -6,18 +6,11 @@
 /*   By: jblack-b <jblack-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 13:45:42 by jblack-b          #+#    #+#             */
-/*   Updated: 2019/06/03 13:47:40 by jblack-b         ###   ########.fr       */
+/*   Updated: 2021/01/06 18:40:25 by jblack-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libmath.h"
-
-/*
-*	Fucntion: substact two vectors
-*	Parameters: two vectors
-*	Return: difference of two vectors, no parammeters change
-*/
-
 
 t_vec3	ft_vec3_substract(t_vec3 a, t_vec3 b)
 {

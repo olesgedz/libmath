@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_vec3_neg.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: olesgedz <olesgedz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jblack-b <jblack-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/28 21:56:30 by olesgedz          #+#    #+#             */
-/*   Updated: 2019/08/28 22:03:10 by olesgedz         ###   ########.fr       */
+/*   Updated: 2021/01/06 18:39:04 by jblack-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libmath.h"
 
-t_vec3 ft_vec3_neg(t_vec3 vect)
+t_vec3	ft_vec3_neg(t_vec3 vect)
 {
 	return (t_vec3){-vect.x, -vect.y, -vect.z};
 }
